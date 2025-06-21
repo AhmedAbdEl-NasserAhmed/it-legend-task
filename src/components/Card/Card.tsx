@@ -1,7 +1,7 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import "./Card.css";
 
-import { FileText, LockKeyhole } from "lucide-react";
+import { FileText, LockKeyhole, Minus } from "lucide-react";
 import { AppContext, learningVideos } from "../../constants";
 
 const Card = ({
@@ -13,6 +13,8 @@ const Card = ({
   description: string;
   content: { id: number; title: string; pdfLink?: string }[];
 }) => {
+  const [heightCollapse, setHeightCollapse] = useState<boolean>(false);
+
   const context = useContext(AppContext);
 
   const { videoIndex } = context!;
@@ -20,38 +22,52 @@ const Card = ({
   return (
     <div className="card">
       <div className="card-title">
-        <h3>{header}</h3>
+        <div className="card-header">
+          <h3>{header}</h3>
+          <Minus
+            onClick={() => setHeightCollapse((prev) => !prev)}
+            className="card-header__collapse"
+          />
+        </div>
         <p>{description}</p>
       </div>
-      {content.map((item, index) => {
-        return (
-          <>
-            <div key={item.id} className="card-content">
-              <div className="card-content__title">
-                <FileText />
-                {item.pdfLink ? (
-                  <a
-                    type="button"
-                    target="_blank"
-                    href={item.pdfLink}
-                    rel="noopener noreferrer"
-                  >
-                    {item.title}
-                  </a>
-                ) : (
-                  <p>{item.title}</p>
+      <div
+        className="card-container"
+        style={{
+          height: heightCollapse ? "0" : "auto",
+          marginTop: heightCollapse ? "0" : "25px"
+        }}
+      >
+        {content.map((item, index) => {
+          return (
+            <>
+              <div key={item.id} className="card-content">
+                <div className="card-content__title">
+                  <FileText />
+                  {item.pdfLink ? (
+                    <a
+                      type="button"
+                      target="_blank"
+                      href={item.pdfLink}
+                      rel="noopener noreferrer"
+                    >
+                      {item.title}
+                    </a>
+                  ) : (
+                    <p>{item.title}</p>
+                  )}
+                </div>
+                {videoIndex !== learningVideos.length && !item.pdfLink && (
+                  <LockKeyhole />
                 )}
               </div>
-              {videoIndex !== learningVideos.length && !item.pdfLink && (
-                <LockKeyhole />
+              {index !== content.length - 1 && (
+                <span className="seperator"></span>
               )}
-            </div>
-            {index !== content.length - 1 && (
-              <span className="seperator"></span>
-            )}
-          </>
-        );
-      })}
+            </>
+          );
+        })}
+      </div>
     </div>
   );
 };
