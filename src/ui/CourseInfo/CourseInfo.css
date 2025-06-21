@@ -1,0 +1,11 @@
+.course-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  gap: 15px;
+}
+
+.course-info__heading {
+  font-size: 26px;
+}

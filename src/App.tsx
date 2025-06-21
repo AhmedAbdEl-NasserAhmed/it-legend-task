@@ -1,7 +1,8 @@
 import "./App.css";
-import VideoPlayer from "./components/VideoPlayer";
+import CourseInfo from "./ui/CourseInfo/CourseInfo";
+import CourseOverview from "./ui/CourseOverview/CourseOverview";
 
-import NavBar from "./ui/NavBar";
+import NavBar from "./ui/NavBar/NavBar";
 
 function App() {
   return (
@@ -9,8 +10,8 @@ function App() {
       <NavBar />
       <div className="container">
         <main className="main-content">
-          <VideoPlayer />
-          <div>2</div>
+          <CourseOverview />
+          <CourseInfo />
         </main>
       </div>
     </>
