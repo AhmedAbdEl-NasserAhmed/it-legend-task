@@ -1,7 +1,7 @@
 import { useContext, useEffect } from "react";
-import { AppContext, learningVideos } from "../../constants";
 import "./ProgressBar.css";
 import { ChevronDown } from "lucide-react";
+import { AppContext, learningVideos } from "../../constants";
 
 const ProgressBar = () => {
   const context = useContext(AppContext);

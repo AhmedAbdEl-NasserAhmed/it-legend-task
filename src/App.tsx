@@ -2,8 +2,8 @@ import { useState } from "react";
 import "./App.css";
 import CourseInfo from "./ui/CourseInfo/CourseInfo";
 import CourseOverview from "./ui/CourseOverview/CourseOverview";
-import { AppContext, type AppContextType } from "./constants";
 import NavBar from "./ui/NavBar/NavBar";
+import { AppContext, type AppContextType } from "./constants";
 
 function App() {
   const [videoIndex, setVideoIndex] = useState<number>(0);

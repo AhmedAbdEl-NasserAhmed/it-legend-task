@@ -1,8 +1,8 @@
 import "./CourseInfo.css";
 
 import ProgressBar from "../../components/ProgressBar/ProgressBar";
-import { learningWeeksProgess } from "../../constants";
 import Card from "../../components/Card/Card";
+import { learningWeeksProgess } from "../../constants";
 
 const CourseInfo = () => {
   return (

@@ -1,0 +1,39 @@
+.course-materials {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.course-materials__info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  & > div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #4d4d4d;
+  }
+
+  p {
+    font-size: 12px;
+  }
+}
+
+.course-materials__container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.seperator {
+  display: block;
+  width: 100%;
+  height: 0.5px;
+  background-color: #eeee;
+}

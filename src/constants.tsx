@@ -1,5 +1,7 @@
 import { createContext } from "react";
 
+import { Clock, Globe, Library, User } from "lucide-react";
+
 export const learningVideos = [
   "https://www.youtube.com/watch?v=5MgBikgcWnY", // JavaScript Tutorial for Beginners
   "https://www.youtube.com/watch?v=2Ji-clqUYnA", // Node.js Tutorial
@@ -60,6 +62,13 @@ export const learningWeeksProgess = [
       { id: 6, title: "Exam" }
     ]
   }
+];
+
+export const courseMaterials = [
+  { id: 1, info: "Duration", title: "3 weeks", icon: <Clock /> },
+  { id: 2, info: "Lessons", title: "8", icon: <Library /> },
+  { id: 3, info: "Enrolled", title: "65 students", icon: <User /> },
+  { id: 4, info: "Language", title: "English", icon: <Globe /> }
 ];
 
 export type AppContextType = {
