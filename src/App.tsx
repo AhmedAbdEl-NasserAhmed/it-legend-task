@@ -1,5 +1,11 @@
+import NavBar from "./ui/NavBar";
+
 function App() {
-  return <h1>Great to see you again</h1>;
+  return (
+    <div>
+      <NavBar />
+    </div>
+  );
 }
 
 export default App;

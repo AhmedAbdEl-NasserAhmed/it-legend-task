@@ -1,0 +1,42 @@
+.nav {
+  background-color: #f5f9fa;
+  padding: 20px 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  & > div {
+    display: flex;
+    align-items: center;
+
+    p {
+      display: flex;
+      align-items: center;
+
+      color: #767777;
+    }
+  }
+}
+
+.heading-web,
+.heading-mobile {
+  font-size: 26px;
+  display: none;
+}
+
+@media (min-width: 500px) {
+  .heading-web {
+    display: block;
+  }
+}
+
+@media (max-width: 500px) {
+  .heading-mobile {
+    display: block;
+  }
+}
+
+.chevron-right {
+  width: 16px;
+  height: 16px;
+}

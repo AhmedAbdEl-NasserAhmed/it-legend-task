@@ -1,0 +1,32 @@
+import { ChevronRight } from "lucide-react";
+import "./NavBar.css";
+
+const NavBar = () => {
+  return (
+    <nav className="nav">
+      <div>
+        <p>
+          Home{" "}
+          <span>
+            <ChevronRight className="chevron-right" />
+          </span>
+        </p>
+        <p>
+          Courses{" "}
+          <span>
+            <ChevronRight className="chevron-right" />
+          </span>
+        </p>
+        <p>
+          <strong>Course Details</strong>
+        </p>
+      </div>
+      <h2 className="heading-web">Starting SEO as your Home</h2>
+      <h2 className="heading-mobile">
+        Starting SEO as your Home Based Business
+      </h2>
+    </nav>
+  );
+};
+
+export default NavBar;
