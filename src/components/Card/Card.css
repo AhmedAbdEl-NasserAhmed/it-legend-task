@@ -47,16 +47,6 @@
   }
 }
 
-.card-header__collapse {
-  display: none;
-}
-
-@media (max-width: 850px) {
-  .card-header__collapse {
-    display: block;
-  }
-}
-
 .card-container {
   display: flex;
   flex-direction: column;
