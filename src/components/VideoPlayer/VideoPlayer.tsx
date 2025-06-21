@@ -1,11 +1,18 @@
-import { useState } from "react";
+import { useContext } from "react";
 import "./VideoPlayer.css";
 
 import ReactPlayer from "react-player";
-import { learningVideos } from "../../constants";
+import { AppContext, learningVideos } from "../../constants";
 
 const VideoPlayer = () => {
-  const [videoIndex, setVideoIndex] = useState<number>(0);
+  const context = useContext(AppContext);
+
+  if (!context) return null;
+
+  const { videoIndex, setVideoIndex } = context;
+
+  if (videoIndex === learningVideos.length)
+    return <h2>Congratulations 🥳🥳 you have finished Course Videos</h2>;
 
   return (
     <div className="video-player">

@@ -1,9 +1,10 @@
 .course-info {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: start;
   justify-items: center;
-  gap: 15px;
+  gap: 25px;
+  width: 100%;
 }
 
 .course-info__heading {
