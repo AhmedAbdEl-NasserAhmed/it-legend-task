@@ -5,8 +5,11 @@
 
 @media (max-width: 700px) {
   .video-player {
-    position: sticky;
-    top: 5px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 300px;
     z-index: 1000;
   }
 }

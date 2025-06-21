@@ -12,7 +12,12 @@ const VideoPlayer = () => {
   const { videoIndex, setVideoIndex } = context;
 
   if (videoIndex === learningVideos.length)
-    return <h2>Congratulations 🥳🥳 you have finished Course Videos</h2>;
+    return (
+      <h2>
+        Congratulations 🥳🥳 you have finished Course Videos
+        <p>Now you can go to the exam</p>
+      </h2>
+    );
 
   return (
     <div className="video-player">

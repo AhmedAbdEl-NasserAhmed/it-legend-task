@@ -9,16 +9,18 @@ const CourseInfo = () => {
     <div className="course-info">
       <h2 className="course-info__heading">Topics for This Course</h2>
       <ProgressBar />
-      {learningWeeksProgess.map((week) => {
-        return (
-          <Card
-            key={week.id}
-            header={week.header}
-            description={week.description}
-            content={week.content}
-          />
-        );
-      })}
+      <div id="curriculm" className="cards-container">
+        {learningWeeksProgess.map((week) => {
+          return (
+            <Card
+              key={week.id}
+              header={week.header}
+              description={week.description}
+              content={week.content}
+            />
+          );
+        })}
+      </div>
     </div>
   );
 };

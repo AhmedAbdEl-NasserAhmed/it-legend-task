@@ -7,14 +7,14 @@ const NavBar = () => {
       <div>
         <p>
           Home{" "}
-          <span>
-            <ChevronRight className="chevron-right" />
+          <span className="chevron-right">
+            <ChevronRight />
           </span>
         </p>
         <p>
           Courses{" "}
-          <span>
-            <ChevronRight className="chevron-right" />
+          <span className="chevron-right">
+            <ChevronRight />
           </span>
         </p>
         <p>
