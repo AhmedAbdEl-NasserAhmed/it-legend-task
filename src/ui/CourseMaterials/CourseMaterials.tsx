@@ -8,18 +8,19 @@ const CourseMaterials = () => {
       <div className="course-materials">
         {courseMaterials.map((material, index) => {
           return (
-            <>
-              <div key={index} className="course-materials__info">
-                <div>
+            <div key={material.id} className="course-materials__info">
+              <div>
+                <div className="course-materials__info-container">
                   <div>{material.icon}</div>
                   <div>{material.info}</div>
                 </div>
                 <p>{material.title}</p>
               </div>
+
               {index !== courseMaterials.length - 1 && (
                 <span className="seperator"></span>
               )}
-            </>
+            </div>
           );
         })}
       </div>

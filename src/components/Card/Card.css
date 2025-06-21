@@ -12,6 +12,12 @@
   }
 }
 
+.card-container__content {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
 .card-title {
   display: flex;
   flex-direction: column;

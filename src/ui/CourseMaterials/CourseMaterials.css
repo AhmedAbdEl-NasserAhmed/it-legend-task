@@ -10,11 +10,12 @@
 
 .course-materials__info {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: column;
+  gap: 15px;
 
   & > div {
     display: flex;
+    justify-content: space-between;
     align-items: center;
     gap: 10px;
     color: #4d4d4d;
@@ -23,6 +24,12 @@
   p {
     font-size: 12px;
   }
+}
+
+.course-materials__info-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .course-materials__container {

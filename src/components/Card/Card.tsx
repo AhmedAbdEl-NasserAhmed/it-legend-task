@@ -40,8 +40,8 @@ const Card = ({
       >
         {content.map((item, index) => {
           return (
-            <>
-              <div key={item.id} className="card-content">
+            <div key={item.id} className="card-container__content">
+              <div className="card-content">
                 <div className="card-content__title">
                   <FileText />
                   {item.pdfLink ? (
@@ -64,7 +64,7 @@ const Card = ({
               {index !== content.length - 1 && (
                 <span className="seperator"></span>
               )}
-            </>
+            </div>
           );
         })}
       </div>
