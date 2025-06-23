@@ -18,3 +18,8 @@
     }
   }
 }
+
+.Tooltip {
+  padding: 4px;
+  border-radius: 5px;
+}

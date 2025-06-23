@@ -1,20 +1,27 @@
 import { useState } from "react";
 import "./App.css";
+import { AppContext, type AppContextType } from "./constants";
 import CourseInfo from "./ui/CourseInfo/CourseInfo";
 import CourseOverview from "./ui/CourseOverview/CourseOverview";
 import NavBar from "./ui/NavBar/NavBar";
-import { AppContext, type AppContextType } from "./constants";
 
 function App() {
   const [videoIndex, setVideoIndex] = useState<number>(0);
 
   const [progressBarPercentage, setProgressBarPercentage] = useState<number>(0);
 
+  const [comments, setComments] = useState(() => {
+    const stored = sessionStorage.getItem("comments");
+    return stored ? JSON.parse(stored) : [];
+  });
+
   const contextValue: AppContextType = {
     videoIndex,
     setVideoIndex,
     progressBarPercentage,
-    setProgressBarPercentage
+    setProgressBarPercentage,
+    comments,
+    setComments
   };
 
   return (

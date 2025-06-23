@@ -1,6 +1,15 @@
 import { createContext } from "react";
 
-import { Clock, Globe, Library, User } from "lucide-react";
+import {
+  Clock,
+  FileText,
+  Globe,
+  GraduationCap,
+  Library,
+  MailQuestionMark,
+  MessageCircleMore,
+  User
+} from "lucide-react";
 
 export const learningVideos = [
   "https://www.youtube.com/watch?v=5MgBikgcWnY", // JavaScript Tutorial for Beginners
@@ -76,6 +85,53 @@ export type AppContextType = {
   setVideoIndex: React.Dispatch<React.SetStateAction<number>>;
   setProgressBarPercentage: React.Dispatch<React.SetStateAction<number>>;
   progressBarPercentage: number;
+  setComments: React.Dispatch<
+    React.SetStateAction<
+      {
+        id: string;
+        img: string;
+        name: string;
+        date: string;
+        description: string;
+      }[]
+    >
+  >;
+  comments: {
+    id: string;
+    img: string;
+    name: string;
+    date: string;
+    description: string;
+  }[];
 };
+
+export const mainIcons = [
+  {
+    icon: <GraduationCap />,
+    onClick: () => {},
+    label: "Graduation"
+  },
+  {
+    icon: <MailQuestionMark />,
+    onClick: () => {},
+    label: "Ask a question"
+  },
+  {
+    icon: <MessageCircleMore />,
+    onClick: () => {
+      const comments = document.getElementById("comments");
+      comments?.scrollIntoView({ behavior: "smooth" });
+    },
+    label: "Comments"
+  },
+  {
+    icon: <FileText />,
+    onClick: () => {
+      const curriculm = document.getElementById("curriculm");
+      curriculm?.scrollIntoView({ behavior: "smooth" });
+    },
+    label: "Curriculum"
+  }
+];
 
 export const AppContext = createContext<AppContextType | null>(null);

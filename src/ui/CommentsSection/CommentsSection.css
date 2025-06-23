@@ -1,0 +1,48 @@
+.comments-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.comments-section__form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  textarea {
+    padding: 20px;
+    border-radius: 5px;
+    &:focus {
+      outline: none;
+    }
+  }
+
+  button {
+    padding: 15px;
+    align-self: self-start;
+    border-radius: 5px;
+    background-color: #41b69d;
+    color: white;
+  }
+}
+
+.comments-section__container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  & > img {
+    display: block;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+  }
+}
+
+.comments-section__container-info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 12px;
+  color: #4d4d4d;
+}
