@@ -7,7 +7,7 @@ const MainIcons = () => {
     <div className="main-icons">
       {mainIcons.map((icon) => {
         return (
-          <Tooltip>
+          <Tooltip key={icon.label}>
             <TooltipTrigger onClick={icon.onClick}>{icon.icon}</TooltipTrigger>
             <TooltipContent className="Tooltip">{icon.label}</TooltipContent>
           </Tooltip>
