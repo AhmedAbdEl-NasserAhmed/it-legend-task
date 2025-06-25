@@ -11,7 +11,7 @@ const CourseOverview = () => {
       <VideoPlayer />
       <MainIcons />
       <CourseMaterials />
-      <CommentsSection />
+      <CommentsSection className="comments-section-screen" />
     </div>
   );
 };

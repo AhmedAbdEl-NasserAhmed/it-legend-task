@@ -2,7 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import { AppContext } from "../../constants";
 import "./CommentsSection.css";
 
-const CommentsSection = () => {
+const CommentsSection = ({ className }: { className: string }) => {
   const context = useContext(AppContext);
 
   const { comments, setComments } = context!;
@@ -37,7 +37,7 @@ const CommentsSection = () => {
   }, [comments]);
 
   return (
-    <section id="comments" className="comments-section">
+    <section id="comments" className={`comments-section  ${className} `}>
       <h1>Comments</h1>
       {comments.map((comment) => {
         return (

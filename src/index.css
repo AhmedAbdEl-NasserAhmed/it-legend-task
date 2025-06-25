@@ -17,3 +17,23 @@ button {
   cursor: pointer;
   background: transparent;
 }
+
+.comments-section-mob {
+  display: none;
+}
+
+@media (max-width: 850px) {
+  .comments-section-mob {
+    display: flex;
+  }
+}
+
+.comments-section-screen {
+  display: flex;
+}
+
+@media (max-width: 850px) {
+  .comments-section-screen {
+    display: none;
+  }
+}
