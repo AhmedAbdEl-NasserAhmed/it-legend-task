@@ -105,6 +105,15 @@ export type AppContextType = {
   }[];
 };
 
+export type ModalContextType = {
+  open: boolean;
+  setOpen: React.Dispatch<React.SetStateAction<boolean>>;
+};
+
+export const AppContext = createContext<AppContextType | null>(null);
+
+export const ModalContext = createContext<ModalContextType | null>(null);
+
 export const mainIcons = [
   {
     icon: <GraduationCap />,
@@ -133,5 +142,3 @@ export const mainIcons = [
     label: "Curriculum"
   }
 ];
-
-export const AppContext = createContext<AppContextType | null>(null);

@@ -4,6 +4,7 @@ import { AppContext, type AppContextType } from "./constants";
 import CourseInfo from "./ui/CourseInfo/CourseInfo";
 import CourseOverview from "./ui/CourseOverview/CourseOverview";
 import NavBar from "./ui/NavBar/NavBar";
+import Modal from "./components/Modal/Modal";
 
 function App() {
   const [videoIndex, setVideoIndex] = useState<number>(0);
@@ -27,13 +28,15 @@ function App() {
   return (
     <>
       <AppContext.Provider value={contextValue}>
-        <NavBar />
-        <div className="container">
-          <main className="main-content">
-            <CourseOverview />
-            <CourseInfo />
-          </main>
-        </div>
+        <Modal>
+          <NavBar />
+          <div className="container">
+            <main className="main-content">
+              <CourseOverview />
+              <CourseInfo />
+            </main>
+          </div>
+        </Modal>
       </AppContext.Provider>
     </>
   );
